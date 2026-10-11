@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <!-- テーマアイコン用（単色）。重なりを抜けないため、マイナス記号はレンズの中に置く -->
+    <group android:scaleX="0.64" android:scaleY="0.64" android:pivotX="50" android:pivotY="50" android:translateX="4" android:translateY="4">
+        <path android:fillColor="#FF000000" android:fillType="evenOdd"
+            android:pathData="M32,33h36a10,10 0,0 1,10 10v20a10,10 0,0 1,-10 10H32a10,10 0,0 1,-10 -10V43a10,10 0,0 1,10 -10zM50,40a13,13 0,1 0,0.01 0z" />
+        <path android:fillColor="#FF000000" android:pathData="M41,27h14a3,3 0,0 1,3 3v5h-20v-5a3,3 0,0 1,3 -3z" />
+        <path android:strokeColor="#FF000000" android:strokeWidth="4" android:strokeLineCap="round" android:pathData="M43,53h14" />
+    </group>
+</vector>

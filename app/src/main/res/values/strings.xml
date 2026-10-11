@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- English (default). Japanese is in values-ja. -->
+<resources>
+    <string name="app_name">Hushutter</string>
+
+    <!-- Home -->
+    <string name="hero_label">Shutter sound</string>
+    <string name="hero_on">Currently\non</string>
+    <string name="hero_muted">Currently\nsilenced</string>
+    <string name="hero_just_muted">Now\nsilenced</string>
+    <string name="hero_just_restored">Turned\nback on</string>
+    <string name="hero_sub_working">Switching…\nThis takes a few seconds.</string>
+    <string name="hero_sub_muted">It stays silent even at full volume.\nTo undo, turn the switch off.</string>
+    <string name="hero_sub_on">Turn on the switch below to silence it,\nno matter the volume or sound mode.</string>
+    <string name="toggle_title">Silence</string>
+    <string name="toggle_sub">Built-in camera sound</string>
+    <string name="toggle_working">Switching…</string>
+    <string name="toggle_description">Silence the shutter sound, %s</string>
+    <string name="state_on">on</string>
+    <string name="state_off">off</string>
+    <string name="info_try_title">Take a photo to check</string>
+    <string name="info_try_sub">Try it with the volume turned up</string>
+    <string name="info_ready_title">All set</string>
+    <string name="info_ready_sub">Pairing is complete</string>
+    <string name="info_notify_title">Alerts you if it resets</string>
+    <string name="info_notify_sub">Checks again after OS updates</string>
+    <string name="row_resetup_title">Set up again from the start</string>
+    <string name="row_resetup_sub">If switching doesn\'t work</string>
+    <string name="row_log_title">Copy log</string>
+    <string name="row_log_sub">Paste it when you report a problem</string>
+    <string name="error_title">Couldn\'t switch</string>
+    <string name="error_copy">Copy log</string>
+    <string name="error_close">Close</string>
+    <string name="toast_log_copied">Log copied</string>
+    <string name="error_notification_permission">Notification permission is needed, because you enter the pairing code from a notification. Go to Settings → Apps → %s → Notifications and turn it on.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_label">Setup  %1$d / %2$d</string>
+    <string name="dev_title">Turn on\nDeveloper options</string>
+    <string name="dev_step1">Tap the button below to open \"About phone\"</string>
+    <string name="dev_step2">Tap \"Software information\"</string>
+    <string name="dev_step3">Tap \"Build number\" 7 times in a row (enter your screen lock PIN if asked)</string>
+    <string name="dev_step4">When you see \"Developer mode has been turned on\", come back to this app</string>
+    <string name="dev_cta">Open About phone</string>
+    <string name="wifi_title">Connect to Wi-Fi</string>
+    <string name="wifi_lead">This app uses Galaxy\'s \"Wireless debugging\", which only works while you\'re connected to Wi-Fi. Your home or work Wi-Fi is fine.</string>
+    <string name="wifi_step1">Tap the button below to open Wi-Fi settings</string>
+    <string name="wifi_step2">Tap the Wi-Fi network you usually use</string>
+    <string name="wifi_step3">Once connected, come back to this app</string>
+    <string name="wifi_cta">Open Wi-Fi settings</string>
+    <string name="pair_title">Pair, then silence\nthe shutter</string>
+    <string name="pair_step1">Tap the button below to open \"Wireless debugging\" and turn it on (if asked to allow it on this network, tap \"Allow\")</string>
+    <string name="pair_step2">Tap \"Pair device with pairing code\"</string>
+    <string name="pair_step3">Swipe down from the top of the screen, type the 6-digit code into \"Enter code\", and send it</string>
+    <string name="pair_step4">You\'re done when \"Done\" appears</string>
+    <string name="pair_status_working">Setting up… Please wait.</string>
+    <string name="pair_status_ready">Found the pairing screen. Enter the 6-digit code with \"Enter code\" in the notification.</string>
+    <string name="pair_status_waiting">Waiting for the pairing screen to open.</string>
+    <string name="pair_cta">Open Wireless debugging</string>
+    <string name="pair_cta_again">Open Wireless debugging again</string>
+
+    <!-- Setup guide illustrations (mimic the Galaxy Settings screens) -->
+    <string name="illus_software_info">Software information</string>
+    <string name="illus_oneui_version">One UI version</string>
+    <string name="illus_android_version">Android version</string>
+    <string name="illus_build_number">Build number</string>
+    <string name="illus_tap_7">Tap 7 times</string>
+    <string name="illus_se_status">SE for Android status</string>
+    <string name="illus_wifi">Wi-Fi</string>
+    <string name="illus_on">On</string>
+    <string name="illus_current_network">Current network</string>
+    <string name="illus_your_wifi">Your usual Wi-Fi</string>
+    <string name="illus_connected">Connected</string>
+    <string name="illus_other_networks">Other networks</string>
+    <string name="illus_wireless_debugging">Wireless debugging</string>
+    <string name="illus_pair_qr">Pair device with QR code</string>
+    <string name="illus_pair_code">Pair device with pairing code</string>
+    <string name="illus_pair_hint">Type the on-screen code into the notification</string>
+    <string name="illus_notification_app">Hushutter (notification)</string>
+    <string name="illus_notification_title">Enter pairing code</string>
+
+    <!-- Service: progress and steps -->
+    <string name="progress_muting">Silencing the shutter sound…</string>
+    <string name="progress_restoring">Turning the shutter sound back on…</string>
+    <string name="progress_cancelling">Cancelling…</string>
+    <string name="progress_closing">Closing…</string>
+    <string name="step_preparing">Preparing</string>
+    <string name="step_pairing">Pairing</string>
+    <string name="step_wireless_on">Turning on wireless debugging</string>
+    <string name="step_discovering">Looking for wireless debugging</string>
+    <string name="step_connecting">Connecting</string>
+    <string name="step_writing">Changing settings</string>
+    <string name="step_command">Running: %s</string>
+
+    <!-- Service: results -->
+    <string name="status_pairing_wait">Waiting for pairing: open \"Wireless debugging\" → \"Pair device with pairing code\".</string>
+    <string name="error_pair_closed">The pairing screen is closed. Open it again, then enter the code.</string>
+    <string name="error_pair_digits">The pairing code is 6 digits. Please enter it again.</string>
+    <string name="error_pair_failed">Couldn\'t pair. Enter the latest code shown on screen again.</string>
+    <string name="result_cancelled">Cancelled.</string>
+    <string name="result_timeout">No response while \"%s\", so it was stopped. Use \"Copy log\" in the app and send it.</string>
+    <string name="result_failed">Failed while \"%1$s\": %2$s\nUse \"Copy log\" in the app and send it.</string>
+    <string name="result_no_wifi">Connect to Wi-Fi and try again (wireless debugging only works on Wi-Fi).</string>
+    <string name="result_allow_network">Couldn\'t connect to wireless debugging. If you see \"Allow wireless debugging on this network?\", tap \"Allow\" and try again.</string>
+    <string name="need_pairing">Pairing is needed.</string>
+    <string name="need_pairing_connect">Couldn\'t connect to wireless debugging.</string>
+    <string name="need_pairing_message">%s Turn on \"Wireless debugging\", open \"Pair device with pairing code\", and enter the 6-digit code with \"Enter code\" in the notification.</string>
+    <string name="error_no_camera">Galaxy built-in camera (%s) not found</string>
+    <string name="error_write_failed">Couldn\'t write the setting (current value: %s)</string>
+    <string name="result_muted">Done. Take a photo with the volume up to check.</string>
+    <string name="result_partial">The forced shutter sound was turned off, but the camera app couldn\'t be muted (%s). Silent mode will keep it quiet.</string>
+    <string name="result_restored">Turned back on (the shutter sound always plays).</string>
+
+    <!-- Notifications -->
+    <string name="channel_work">In progress</string>
+    <string name="channel_result">Results</string>
+    <string name="notification_done">Hushutter: done</string>
+    <string name="notification_failed">Hushutter: failed</string>
+    <string name="notification_pair_title">Enter pairing code</string>
+    <string name="notification_pair_text">Enter the 6-digit code shown on the pairing screen.</string>
+    <string name="notification_code_label">Pairing code (6 digits)</string>
+    <string name="notification_enter_code">Enter code</string>
+    <string name="notification_open_title">Open the pairing screen</string>
+    <string name="notification_open_text">Developer options → turn on \"Wireless debugging\" → tap its name → tap \"Pair device with pairing code\".</string>
+    <string name="notification_cancel">Cancel</string>
+    <string name="boot_title">Shutter sound setting was reset</string>
+    <string name="boot_text">Tap to silence the shutter again.</string>
+</resources>

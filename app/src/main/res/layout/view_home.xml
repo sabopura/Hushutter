@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One UI と同じく、上は「見る」ための大きな見出し、下は指の届く「操作」 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/hero"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="36"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp">
+
+        <TextView
+            style="@style/Text.HeroLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hero_label" />
+
+        <TextView
+            android:id="@+id/hero_title"
+            style="@style/Text.HeroTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/hero_sub"
+            style="@style/Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="64"
+        android:clipToPadding="false"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:id="@+id/home_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp"
+            android:paddingBottom="20dp">
+
+            <!-- 失敗したときだけ出す -->
+            <LinearLayout
+                android:id="@+id/error_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_card_error"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/error_title"
+                    android:textColor="@color/error"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/error_text"
+                    style="@style/Text.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/ink" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/error_copy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_row"
+                        android:gravity="center"
+                        android:paddingHorizontal="14dp"
+                        android:text="@string/error_copy"
+                        android:textColor="@color/error"
+                        android:textSize="14.5sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/error_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_row"
+                        android:gravity="center"
+                        android:paddingHorizontal="14dp"
+                        android:text="@string/error_close"
+                        android:textColor="@color/error"
+                        android:textSize="14.5sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 切りかえ（カード全体がスイッチ） -->
+            <LinearLayout
+                android:id="@+id/toggle_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:minHeight="104dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="22dp">
+
+                <FrameLayout
+                    android:id="@+id/toggle_glyph"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_glyph">
+
+                    <ImageView
+                        android:id="@+id/toggle_icon"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_mute" />
+
+                    <ProgressBar
+                        android:id="@+id/toggle_progress"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:indeterminate="true"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/toggle_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/toggle_title"
+                        android:textColor="@color/ink"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/toggle_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/toggle_sub"
+                        android:textColor="@color/sub"
+                        android:textSize="13.5sp" />
+                </LinearLayout>
+
+                <io.github.sabopura.hushutter.PillSwitch
+                    android:id="@+id/toggle_switch"
+                    android:layout_width="58dp"
+                    android:layout_height="32dp"
+                    android:importantForAccessibility="no" />
+            </LinearLayout>
+
+            <!-- いまの状態 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:paddingHorizontal="22dp"
+                android:paddingVertical="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="13dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/bg_check"
+                        android:importantForAccessibility="no"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_check"
+                        android:tint="@color/ok" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/info_title"
+                            style="@style/Text.RowTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/info_sub"
+                            style="@style/Text.RowSub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="13dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/bg_bell"
+                        android:importantForAccessibility="no"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_bell"
+                        android:tint="@color/blue" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text.RowTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_notify_title" />
+
+                        <TextView
+                            style="@style/Text.RowSub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_notify_sub" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 困ったとき -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:id="@+id/row_resetup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_row"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="13dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text.RowTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row_resetup_title" />
+
+                        <TextView
+                            style="@style/Text.RowSub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row_resetup_sub" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_chevron"
+                        android:tint="@color/sub" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/row_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_row"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="13dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text.RowTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row_log_title" />
+
+                        <TextView
+                            style="@style/Text.RowSub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row_log_sub" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_chevron"
+                        android:tint="@color/sub" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

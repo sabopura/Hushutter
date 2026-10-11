@@ -1,0 +1,22 @@
+# Build output
+.gradle/
+build/
+app/build/
+captures/
+*.apk
+*.aab
+
+# Local machine settings
+local.properties
+.idea/
+*.iml
+.DS_Store
+
+# Signing keys (kept outside the repository)
+*.jks
+*.keystore
+signing.properties
+
+# Work files (original fonts and the subsetting script stay local)
+fonts-src/
+tools/

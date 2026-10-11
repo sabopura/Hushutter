@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 開発者向けオプション → ワイヤレスデバッグ と、コードを入れる通知のミニ図 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:importantForAccessibility="noHideDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card"
+        android:clipChildren="false"
+        android:orientation="vertical"
+        android:paddingHorizontal="18dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="14dp">
+
+        <TextView style="@style/Text.MiniTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6dp" android:text="@string/illus_wireless_debugging" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:paddingHorizontal="4dp" android:paddingVertical="10dp">
+            <TextView style="@style/Text.MiniRow" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/illus_on" android:textStyle="bold" />
+            <View android:layout_width="38dp" android:layout_height="20dp" android:background="@drawable/mini_switch_on" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/line" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="4dp" android:paddingVertical="10dp">
+            <TextView style="@style/Text.MiniRow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/illus_pair_qr" android:textColor="@color/sub" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_highlight"
+            android:clipChildren="false"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="16dp">
+
+            <TextView style="@style/Text.MiniRow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:layout_marginEnd="56dp" android:text="@string/illus_pair_code" android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="42dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="-2dp"
+                android:src="@drawable/ic_finger" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.25"
+        android:text="@string/illus_pair_hint"
+        android:textColor="@color/ink"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_notification" android:tint="@color/blue" />
+            <TextView style="@style/Text.MiniSub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="@string/illus_notification_app" />
+        </LinearLayout>
+        <TextView style="@style/Text.MiniRow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/illus_notification_title" android:textStyle="bold" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input"
+                android:gravity="center_vertical"
+                android:letterSpacing="0.12"
+                android:paddingHorizontal="16dp"
+                android:text="123456"
+                android:textColor="@color/ink"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_send"
+                android:padding="12dp"
+                android:src="@drawable/ic_send"
+                android:tint="@color/bg" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

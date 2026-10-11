@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#FF0E0F12</color>
+    <color name="surface">#FF1C1D22</color>
+    <color name="ink">#FFF2F3F5</color>
+    <color name="sub">#FFA2A6B0</color>
+    <color name="blue">#FF4F82FF</color>
+    <color name="blue_soft">#FF1F2B4D</color>
+    <color name="ok">#FF4CC38A</color>
+    <color name="ok_soft">#FF183A2A</color>
+    <color name="line">#FF2A2C33</color>
+    <color name="seg_off">#FF3A3D46</color>
+    <color name="num_bg">#FF2E323C</color>
+    <color name="error">#FFFF8A7A</color>
+    <color name="error_soft">#FF3D201D</color>
+    <color name="on_blue">#FFFFFFFF</color>
+    <color name="on_blue_sub">#FFDFE8FF</color>
+    <color name="switch_off">#FF50535C</color>
+</resources>

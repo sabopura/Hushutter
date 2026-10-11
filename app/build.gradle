@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+}
+
+// 公開用の署名鍵の設定。鍵はリポジトリの外に置く。
+// 環境変数 HUSHUTTER_SIGNING でファイルを指定できる。見つからなければ debug 鍵で署名する（自分でビルドする人向け）。
+def signingFile = file(System.getenv('HUSHUTTER_SIGNING')
+        ?: "${System.getProperty('user.home')}/.publish-guard/keys/hushutter/signing.properties")
+def signing = new Properties()
+if (signingFile.exists()) signingFile.withInputStream { signing.load(it) }
+
+android {
+    namespace 'io.github.sabopura.hushutter'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'io.github.sabopura.hushutter'
+        // ワイヤレスデバッグ（ペアリング）は Android 11 から
+        minSdk 30
+        targetSdk 35
+        versionCode 1
+        versionName '1.0.0'
+    }
+
+    signingConfigs {
+        release {
+            if (signing.storeFile) {
+                storeFile file(signing.storeFile)
+                storePassword signing.storePassword
+                keyAlias signing.keyAlias
+                keyPassword signing.keyPassword
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signing.storeFile ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    packaging {
+        resources {
+            excludes += ['META-INF/versions/9/OSGI-INF/MANIFEST.MF', 'META-INF/DEPENDENCIES']
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    lint {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'com.github.MuntashirAkon:libadb-android:3.1.1'
+    implementation 'org.conscrypt:conscrypt-android:2.5.3'
+    implementation 'org.bouncycastle:bcpkix-jdk15to18:1.81'
+    implementation 'androidx.annotation:annotation:1.9.1'
+}

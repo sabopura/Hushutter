@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- はじめての準備。1 画面 1 ステップで、実際の設定画面のミニ図と手順を見せる -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 見出しも本文と一緒にスクロールさせる（横向きでも本文が読めるように） -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="18dp">
+
+        <LinearLayout
+            android:id="@+id/guide_segments"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/guide_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/guide_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineSpacingMultiplier="1.15"
+            android:textColor="@color/ink"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/guide_lead"
+            style="@style/Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp"
+            android:paddingBottom="16dp">
+
+            <include
+                android:id="@+id/illus_developer"
+                layout="@layout/illus_developer" />
+
+            <include
+                android:id="@+id/illus_wifi"
+                layout="@layout/illus_wifi" />
+
+            <include
+                android:id="@+id/illus_pair"
+                layout="@layout/illus_pair" />
+
+            <LinearLayout
+                android:id="@+id/guide_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/guide_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.3"
+        android:textColor="@color/sub"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/guide_cta"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_cta"
+        android:gravity="center"
+        android:textColor="@color/on_blue"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+</LinearLayout>

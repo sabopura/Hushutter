@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- One UI のように、上は大きな見出し、下は操作 -->
+    <style name="Text" />
+    <style name="Text.HeroLabel">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/sub</item>
+    </style>
+    <style name="Text.HeroTitle">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+    </style>
+    <style name="Text.Body">
+        <item name="android:textSize">14.5sp</item>
+        <item name="android:textColor">@color/sub</item>
+        <item name="android:lineSpacingMultiplier">1.35</item>
+    </style>
+    <style name="Text.RowTitle">
+        <item name="android:textSize">15.5sp</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+    <style name="Text.RowSub">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/sub</item>
+        <item name="android:layout_marginTop">3dp</item>
+    </style>
+    <style name="Text.MiniTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+    <style name="Text.MiniRow">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+    <style name="Text.MiniSub">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/sub</item>
+    </style>
+</resources>

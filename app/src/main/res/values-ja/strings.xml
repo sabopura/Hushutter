@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 日本語。端末の言語が日本語のときに使われる -->
+<resources>
+    <string name="app_name">Hushutter</string>
+
+    <!-- ホーム -->
+    <string name="hero_label">シャッター音</string>
+    <string name="hero_on">いまは\n鳴る設定です</string>
+    <string name="hero_muted">いまは\n鳴らない設定です</string>
+    <string name="hero_just_muted">鳴らない設定に\nなりました</string>
+    <string name="hero_just_restored">鳴る設定に\n戻しました</string>
+    <string name="hero_sub_working">切りかえています…\n数秒かかります。</string>
+    <string name="hero_sub_muted">音量を上げたままでも鳴りません。\n戻すときは、スイッチをオフにします。</string>
+    <string name="hero_sub_on">下のスイッチをオンにすると、\n音量やマナーモードに関係なく\n鳴らなくなります。</string>
+    <string name="toggle_title">鳴らさない</string>
+    <string name="toggle_sub">標準カメラの音</string>
+    <string name="toggle_working">切りかえています…</string>
+    <string name="toggle_description">シャッター音を鳴らさない、%s</string>
+    <string name="state_on">オン</string>
+    <string name="state_off">オフ</string>
+    <string name="info_try_title">カメラで 1 枚撮って確かめましょう</string>
+    <string name="info_try_sub">音量を上げた状態で試してください</string>
+    <string name="info_ready_title">準備はできています</string>
+    <string name="info_ready_sub">ペアリングは済んでいます</string>
+    <string name="info_notify_title">設定が戻ったらお知らせ</string>
+    <string name="info_notify_sub">OS アップデートのあとに確認します</string>
+    <string name="row_resetup_title">はじめから準備しなおす</string>
+    <string name="row_resetup_sub">切りかえがうまくいかないとき</string>
+    <string name="row_log_title">ログをコピー</string>
+    <string name="row_log_sub">不具合を伝えるときに貼り付けてください</string>
+    <string name="error_title">切りかえられませんでした</string>
+    <string name="error_copy">ログをコピー</string>
+    <string name="error_close">閉じる</string>
+    <string name="toast_log_copied">ログをコピーしました</string>
+    <string name="error_notification_permission">通知の許可が必要です。ペアリングのコードは通知から入力します。設定 → アプリ → %s → 通知 をオンにしてください。</string>
+
+    <!-- はじめての準備 -->
+    <string name="guide_label">はじめての準備　%1$d / %2$d</string>
+    <string name="dev_title">開発者向けオプションを\nオンにします</string>
+    <string name="dev_step1">下のボタンで「端末情報」を開く</string>
+    <string name="dev_step2">「ソフトウェア情報」をタップ</string>
+    <string name="dev_step3">「ビルド番号」を 7 回続けてタップ（画面ロックの暗証番号を聞かれたら入力）</string>
+    <string name="dev_step4">「開発者モードがオンになりました」と出たら、このアプリに戻る</string>
+    <string name="dev_cta">端末情報を開く</string>
+    <string name="wifi_title">Wi-Fi につなぎます</string>
+    <string name="wifi_lead">シャッター音の設定には、Galaxy の「ワイヤレスデバッグ」を使います。これは Wi-Fi につないでいる間だけ使えます。家や職場の Wi-Fi で大丈夫です。</string>
+    <string name="wifi_step1">下のボタンで Wi-Fi の設定を開く</string>
+    <string name="wifi_step2">いつも使っている Wi-Fi をタップしてつなぐ</string>
+    <string name="wifi_step3">つながったら、このアプリに戻る</string>
+    <string name="wifi_cta">Wi-Fi の設定を開く</string>
+    <string name="pair_title">ペアリングして、\nシャッター音を消します</string>
+    <string name="pair_step1">下のボタンで「ワイヤレスデバッグ」を開き、スイッチをオンにする（「このネットワークで許可」と聞かれたら「許可」）</string>
+    <string name="pair_step2">「ペア設定コードによるデバイスのペア設定」を\nタップ</string>
+    <string name="pair_step3">画面の上から通知を引き下ろし、「コードを入力」に 6 桁の数字を入れて送信</string>
+    <string name="pair_step4">「完了しました」と出たら終わりです</string>
+    <string name="pair_status_working">設定しています…　そのままお待ちください。</string>
+    <string name="pair_status_ready">ペアリング画面を見つけました。通知の「コードを入力」から 6 桁の数字を入れてください。</string>
+    <string name="pair_status_waiting">ペアリング画面が開くのを待っています。</string>
+    <string name="pair_cta">ワイヤレスデバッグを開く</string>
+    <string name="pair_cta_again">ワイヤレスデバッグをもう一度開く</string>
+
+    <!-- 準備ガイドのミニ図（Galaxy の設定画面に合わせる） -->
+    <string name="illus_software_info">ソフトウェア情報</string>
+    <string name="illus_oneui_version">One UI バージョン</string>
+    <string name="illus_android_version">Android バージョン</string>
+    <string name="illus_build_number">ビルド番号</string>
+    <string name="illus_tap_7">7 回タップ</string>
+    <string name="illus_se_status">SE for Android の状態</string>
+    <string name="illus_wifi">Wi-Fi</string>
+    <string name="illus_on">オン</string>
+    <string name="illus_current_network">現在のネットワーク</string>
+    <string name="illus_your_wifi">いつも使っている Wi-Fi</string>
+    <string name="illus_connected">接続済み</string>
+    <string name="illus_other_networks">ほかのネットワーク</string>
+    <string name="illus_wireless_debugging">ワイヤレスデバッグ</string>
+    <string name="illus_pair_qr">QR コードでデバイスをペア設定</string>
+    <string name="illus_pair_code">ペア設定コードによるデバイスのペア設定</string>
+    <string name="illus_pair_hint">画面に出た 6 桁の数字を、通知に入れます</string>
+    <string name="illus_notification_app">Hushutter（通知）</string>
+    <string name="illus_notification_title">ペアリングコードを入力</string>
+
+    <!-- サービス：進み具合と段階 -->
+    <string name="progress_muting">シャッター音を消しています…</string>
+    <string name="progress_restoring">シャッター音を元に戻しています…</string>
+    <string name="progress_cancelling">中止しています…</string>
+    <string name="progress_closing">終了しています…</string>
+    <string name="step_preparing">準備</string>
+    <string name="step_pairing">ペアリングしています</string>
+    <string name="step_wireless_on">ワイヤレスデバッグをオンにしています</string>
+    <string name="step_discovering">ワイヤレスデバッグを探しています</string>
+    <string name="step_connecting">接続しています</string>
+    <string name="step_writing">設定を書き換えています</string>
+    <string name="step_command">コマンド実行: %s</string>
+
+    <!-- サービス：結果 -->
+    <string name="status_pairing_wait">ペアリング待ち：「ワイヤレスデバッグ」→「ペア設定コードによるデバイスのペア設定」を開いてください。</string>
+    <string name="error_pair_closed">ペアリング画面が閉じています。もう一度開いてからコードを入力してください。</string>
+    <string name="error_pair_digits">ペアリングコードは 6 桁の数字です。もう一度入力してください。</string>
+    <string name="error_pair_failed">ペアリングできませんでした。画面に出ている最新のコードを、もう一度入力してください。</string>
+    <string name="result_cancelled">中止しました。</string>
+    <string name="result_timeout">「%s」の段階で応答がなく、中止しました。アプリの「ログをコピー」で内容を送ってください。</string>
+    <string name="result_failed">「%1$s」の段階で失敗しました: %2$s\nアプリの「ログをコピー」で内容を送ってください。</string>
+    <string name="result_no_wifi">Wi-Fi に接続してから、もう一度お試しください（ワイヤレスデバッグは Wi-Fi 接続中だけ使えます）。</string>
+    <string name="result_allow_network">ワイヤレスデバッグに接続できませんでした。「このネットワークでワイヤレスデバッグを許可しますか？」と表示された場合は「許可」を押して、もう一度お試しください。</string>
+    <string name="need_pairing">ペアリングが必要です。</string>
+    <string name="need_pairing_connect">ワイヤレスデバッグに接続できませんでした。</string>
+    <string name="need_pairing_message">%s「ワイヤレスデバッグ」をオンにして「ペア設定コードによるデバイスのペア設定」を開き、通知の「コードを入力」から 6 桁のコードを入力してください。</string>
+    <string name="error_no_camera">Galaxy 標準カメラ（%s）が見つかりません</string>
+    <string name="error_write_failed">設定を書き込めませんでした（現在値: %s）</string>
+    <string name="result_muted">完了しました。音量を上げたまま、カメラで 1 枚撮って確認してください。</string>
+    <string name="result_partial">シャッター音の強制は解除しましたが、カメラアプリのミュートは設定できませんでした（%s）。マナーモードにすると鳴らなくなります。</string>
+    <string name="result_restored">元に戻しました（シャッター音が常に鳴る状態）。</string>
+
+    <!-- 通知 -->
+    <string name="channel_work">設定中</string>
+    <string name="channel_result">結果</string>
+    <string name="notification_done">Hushutter：完了</string>
+    <string name="notification_failed">Hushutter：失敗</string>
+    <string name="notification_pair_title">ペアリングコードを入力</string>
+    <string name="notification_pair_text">ペアリング画面に表示されている 6 桁のコードを入力してください。</string>
+    <string name="notification_code_label">ペアリングコード（6 桁）</string>
+    <string name="notification_enter_code">コードを入力</string>
+    <string name="notification_open_title">ペアリング画面を開いてください</string>
+    <string name="notification_open_text">開発者向けオプション →「ワイヤレスデバッグ」をオン → 項目名をタップ →「ペア設定コードによるデバイスのペア設定」をタップしてください。</string>
+    <string name="notification_cancel">中止</string>
+    <string name="boot_title">シャッター音の設定が元に戻りました</string>
+    <string name="boot_text">タップすると、もう一度シャッター音を消します。</string>
+</resources>
